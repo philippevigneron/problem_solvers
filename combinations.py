@@ -1,12 +1,14 @@
 from datetime import datetime
-iteration_nb = 17
+import sys
+
+iteration_nb = int(sys.argv[1])
 moves = [1,2]
 solutions = 0
 start = datetime.now()
 
 def take_a_step(step):
   if (sum(step) >= iteration_nb): 
-    print(step)
+    #print(step)
     global solutions
     solutions+=1
   for j in moves:
